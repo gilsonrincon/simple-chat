@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Simple-Chat</title>
+
+	<link rel="stylesheet" href="/css/styles.css"><s></s>
+</head>
+<body>
+	<ul class="messages"></ul>
+	<div class="text-message">
+		<textarea name="" id="msg" cols="30" rows="10"></textarea>
+		<button class="send">Send</button>
+	</div>
+
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script>
+	  var socket = io();
+
+	  $('button.send').click(function(){
+	  	socket.emit('new_msg',{msg: $('#msg').val()});
+	  	$('#msg').val('');
+	  	return false;
+	  });
+
+	  socket.on('res_msg', function(msg){
+	  	$('.messages').append('<li>'+msg+'</li>');
+	  });
+	</script>
+</body>
+</html>
