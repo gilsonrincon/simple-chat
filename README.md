@@ -9,4 +9,4 @@ This chat will be released as an OpenSource solution, an easy to use solution fo
 Feel free to suggest features and report bugs.
 
 Regards.
-@gilsonrincon
+<a href="https://twitter.com/gilsonrincon">@gilsonrincon</a>
