@@ -1,4 +1,4 @@
-<h1>simple-chat<h1>
+<h1>simple-chat</h1>
 <hr>
 Simple-Chat is a chat developed in NodeJS and SocketIO.
 
